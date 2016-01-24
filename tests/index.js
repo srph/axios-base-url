@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var nock = require('nock');
-var base = require('./');
+var base = require('../');
 var axios = require('axios');
 
 var inject = function(interceptor) {
