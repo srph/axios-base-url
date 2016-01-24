@@ -3,6 +3,10 @@ var nock = require('nock');
 var base = require('./');
 var axios = require('axios');
 
+var inject = function(interceptor) {
+  return axios.interceptors.request.use(interceptor);
+}
+
 var eject = function(interceptor) {
   axios.interceptors.request.eject(interceptor);
 }
@@ -13,7 +17,7 @@ describe('axios-base-url interceptor', function() {
   });
 
   it('should not append the base-url if request url is absolute', function(done) {
-    var interceptor = base('//yolo.com');
+    var interceptor = inject(base('//yolo.com'));
 
     nock('http://swag.com')
       .get('/hehe')
@@ -29,7 +33,7 @@ describe('axios-base-url interceptor', function() {
   });
 
   it('should append the base-url otherwise', function(done) {
-    var interceptor = base('http://persisssists.con');
+    var interceptor = inject(base('http://persisssists.con'));
 
     nock('http://persisssists.con')
       .get('/hehe')
