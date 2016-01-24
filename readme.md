@@ -3,7 +3,7 @@ An `axios` inteceptor allowing you to set a base url for all requests.
 
 ## Installation
 ```bash
-npm i axios-base-url --save
+npm i axios-base-url -S
 ```
 
 ## Usage
