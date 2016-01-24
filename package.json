@@ -1,7 +1,7 @@
 {
   "name": "axios-base-url",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "An interceptor allowing you to set a base url for all requests.",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha tests"
