@@ -15,7 +15,7 @@ axios.interceptors.request.use(base);
 
 or, you can take advantage of auto injection:
 
-```js
+```diff
 - var axios = require('axios');
 - var base = require('axios-base-url')('http://graph.facebook.com');
 + require('axios-base-url/inject')('http://graph.facebook.com');
