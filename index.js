@@ -15,9 +15,7 @@ function base(url) {
     return Promise.reject(error);
   });
 
-  return function() {
-    axios.interceptors.request.eject(undo)
-  };
+  return undo;
 };
 
 module.exports = base;
