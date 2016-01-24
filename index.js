@@ -1,15 +1,12 @@
 var axios = require('axios');
-var join = require('url-join');
-var isAbsoluteURL = require('is-absolute-url');
+var base = require('./base');
 
-function base(url) {
-  return function(config) {
-    if ( !isAbsoluteURL(config.url) ) {
-      config.url = join(url, config.url);
-    }
+function inject(url) {
+  var interceptor = axios.interceptors.request.use(base(url));
 
-    return config;
+  return function() {
+    axios.interceptors.request.eject(interceptor);
   };
 };
 
-module.exports = base;
+module.exports = inject;
