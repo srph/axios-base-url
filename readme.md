@@ -1,5 +1,5 @@
 ## axios-base-url
-An `axios` inteceptor allowing you to set a base url for all requests.
+An `axios` interceptor allowing you to set a base url for all requests.
 
 ## Installation
 ```bash
