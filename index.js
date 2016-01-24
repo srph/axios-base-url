@@ -6,7 +6,6 @@ function base(url) {
   return function(config) {
     if ( !isAbsoluteURL(config.url) ) {
       config.url = join(url, config.url);
-      console.log(config.url);
     }
 
     return config;
