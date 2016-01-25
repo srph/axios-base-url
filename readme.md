@@ -17,6 +17,6 @@ In case of [custom instances](https://github.com/mzabriskie/axios#interceptors),
 
 ```js
 var axios = require('axios');
-var base = require('axios-base-url')('http://graph.facebook.com');
+var base = require('axios-base-url/base')('http://graph.facebook.com');
 axios.interceptors.request.use(base);
 ```
