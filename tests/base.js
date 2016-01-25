@@ -33,16 +33,16 @@ describe('axios-base-url interceptor', function() {
   });
 
   it('should append the base-url otherwise', function(done) {
-    var interceptor = inject(base('http://persisssists.con'));
+    var interceptor = inject(base('http://yoloswag.com'));
 
-    nock('http://persisssists.con')
+    nock('http://yoloswag.com')
       .get('/hehe')
       .reply(200, { success: true });
 
     axios.get('hehe')
       .then(function(res) {
         expect(res.data.success).to.be.true;
-        expect(res.config.url).to.match(/persisssists.con\/hehe/);
+        expect(res.config.url).to.match(/yoloswag.com\/hehe/);
         eject(interceptor);
       })
       .then(done, done);
