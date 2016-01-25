@@ -20,3 +20,5 @@ var axios = require('axios');
 var base = require('axios-base-url/base')('http://graph.facebook.com');
 axios.interceptors.request.use(base);
 ```
+
+**Note**: You are *requiring* `axios-base-url/base` not `axios-base-url`.
