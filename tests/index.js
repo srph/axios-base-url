@@ -15,11 +15,20 @@ describe('autoinjection', function() {
       .get('/hehe')
       .reply(200, { success: true });
 
+    nock('http://localhost')
+      .get('/hehe')
+      .reply(200, { success: true });
+
     axios.get('hehe')
       .then(function(res) {
         expect(res.data.success).to.be.true;
         expect(res.config.url).to.match(/persisssists.con\/hehe/);
         eject();
+        return axios.get('/hehe');
+      })
+      .then(function(res) {
+        expect(res.data.success).to.be.true;
+        expect(res.config.url).to.match(/^\/hehe/);     
       })
       .then(done, done);
   });
