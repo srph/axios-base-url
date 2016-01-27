@@ -12,6 +12,13 @@ require('axios-base-url')('http://graph.facebook.com');
 ```
 That's all you need to do to keep going!
 
+## Ejecting
+`axios-base-url` returns a callback that automatically [ejects](https://github.com/mzabriskie/axios#interceptors) the interceptor.
+```js
+var eject = require('axios-base-url')('http://graph.facebook.com');
+eject();
+```
+
 ## Custom Instances
 In case of [custom instances](https://github.com/mzabriskie/axios#interceptors), you can directly use the function used by the library:
 
