@@ -2,7 +2,7 @@
 An [**axios**](https://github.com/mzabriskie/axios) interceptor allowing you to set a base url for all requests.
 
 ## Deprecated
-The **v0.8** already ships base url configuration out of the box. Please use it instead!
+axios **v0.8** already ships base url configuration out of the box. Please use it instead!
 
 ## Installation
 ```bash
