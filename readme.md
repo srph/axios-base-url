@@ -1,6 +1,9 @@
 ## axios-base-url [![npm version](http://img.shields.io/npm/v/axios-base-url.svg?style=flat-square)](https://npmjs.org/package/axios-base-url?style=flat-square) [![Build Status](https://img.shields.io/travis/srph/axios-base-url.svg?style=flat-square)](https://travis-ci.org/srph/axios-base-url?branch=master)
 An [**axios**](https://github.com/mzabriskie/axios) interceptor allowing you to set a base url for all requests.
 
+## Deprecated
+The **v0.8** already ships base url configuration out of the box. Please use it instead!
+
 ## Installation
 ```bash
 npm i axios-base-url -S
